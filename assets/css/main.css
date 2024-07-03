@@ -63,6 +63,8 @@
 /*======================================
 Hero-6 Animation 
 ========================================*/
+
+
 .slider-active .ax-hero6__title, .slider-active .ax-hero6__sub-title, .slider-active .hero-btn {
   animation-fill-mode: both;
   animation-name: fadeInUp;
@@ -914,7 +916,7 @@ Hero-6 Animation
   top: 15px;
   font-size: 36px;
   cursor: pointer;
-  color: #ACACAC;
+  color: #000000;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .offcanvas-nav-wrapper .main-nav-js .sidebar-menu-area > ul > li > .bi {
@@ -1033,7 +1035,7 @@ Hero-6 Animation
 .offcanvas-nav-wrapper .main-nav-js .sub-menu li .bi {
   font-size: 22px;
   cursor: pointer;
-  color: #ACACAC;
+  color: #000000;
   position: absolute;
   top: 15px;
 }
