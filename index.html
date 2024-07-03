@@ -121,6 +121,29 @@
 .ld-sf--button-inside.ld-sf--button-naked:not(.ld-sf--input-underlined) [type=button] {
     padding-inline-end: 1.75em;
 }
+.fixed-button {
+			height: 60px !important;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensures the button stays on top */
+        }
+
+        .fixed-button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            height: 2000px; /* Just to create scrollable content */
+        }
 	</style>
 	<style>
 
@@ -1372,20 +1395,7 @@
 								<br>
 							
 								
-								<div style="height: 50px;" class="ld-sf relative ld-sf--input-solid ld-sf--button-solid ld-sf--size-sm ld-sf--circle ld-sf--border-none ld-sf--input-shadow ld-sf--button-show ld-sf--button-inside">
-									<form style="height: 100%;" class="relative" method="post" action="#">
-										<p class="relative" style="display: none;">
-											.
-										</p><br>
-										<button onclick="window.location.href='https://calendly.com/bloomviewmarketing/30-min-meeting?month=2024-07';" style="height: 30px;" type="button"  class="bg-secondary text-13 inline-flex items-center justify-center m-0 rounded-2 relative bg-secondary hover:bg-primary font-medium">
-											<span class="submit-text">Let’s Schedule a Meeting</span>
-											<span class="ld-sf-spinner rounded-full absolute overflow-hidden">
-												<span class="block lqd-overlay flex rounded-full">Sending </span>
-											</span>
-										</button>
-									</form>
-									<div class="ld_sf_response"></div>
-								</div>
+								
 
 								
 							</div>
@@ -1449,6 +1459,14 @@
 						</div>
 					</div>
 				</section>
+				<div style="height: 2000px;"> <!-- Just to create scrollable content -->
+					<button class="fixed-button" onclick="window.location.href='https://calendly.com/bloomviewmarketing/30-min-meeting?month=2024-07';" style="height: 30px;" type="button"  class="bg-secondary text-13 inline-flex items-center justify-center m-0 rounded-2 relative bg-secondary hover:bg-primary font-medium">
+						<span class="submit-text">Let’s Schedule a Meeting</span>
+						<span class="ld-sf-spinner rounded-full absolute overflow-hidden">
+							<span class="block lqd-overlay flex rounded-full">Sending </span>
+						</span>
+					</button>
+				</div>
 			</footer>
 		</div>
 
