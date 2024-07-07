@@ -1,4 +1,4 @@
-/*  Global  */
+
 :root {
 	--lqd-container-width: 1060px;
 	--lqd-container-width-md: 100%;
@@ -61,12 +61,11 @@
 	--lqd-h6-font-size: 18px;
 
 	--lqd-cc-size-inner: 17px;
-	--lqd-cc-bg: rgb(255, 255, 255);
+	--lqd-cc-bg: rgb(43, 0, 233);
 	--lqd-cc-active-bw: 1px;
 	--lqd-cc-active-bg: rgb(255, 251, 251);
 	--lqd-cc-active-bc: rgb(255, 251, 251);
 	--lqd-cc-active-circle-txt: rgb(255, 251, 251);
-	--lqd-cc-blend-mode: difference;
 }
 
 @media (max-width: 1199px) {
