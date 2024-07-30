@@ -154,6 +154,30 @@
         img#tk {
     height: 1600px !important;
 }
+
+.fixed-button {
+			height: 60px !important;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensures the button stays on top */
+        }
+
+        .fixed-button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            height: 2000px; /* Just to create scrollable content */
+        }
     </style>
 	<body class="lqd-cc-outer-hidden" data-lqd-cc="true" class="lqd-preloader-activated lqd-preloader-style-fade" data-mobile-nav-breakpoint="1199" data-mobile-nav-style="modern" data-mobile-nav-scheme="dark" data-mobile-nav-trigger-alignment="right" data-mobile-header-scheme="gray" data-mobile-logo-alignment="default" data-overlay-onmobile="false">
 		<div class="bg-white" id="wrap">
@@ -2044,6 +2068,21 @@
 				<div class="lqd-modal-foot"></div>
 			</div>
 		</div>
+		<!-- Contact Modal -->
+
+		<!-- Hub wordpress -->
+		
+
+		<button class="fixed-button" onclick="window.location.href='https://calendly.com/bloomviewmarketing/30-min-meeting?month=2024-07';" style="height: 30px;" type="button"  class="bg-secondary text-13 inline-flex items-center justify-center m-0 rounded-2 relative bg-secondary hover:bg-primary font-medium">
+						<span class="submit-text">Let’s Schedule a Meeting</span>
+						
+					</button>
+				
+			</footer>
+		</div>
+
+		<!-- Contact Modal -->
+		
 		<!-- Contact Modal -->
 
 		<!-- Hub wordpress -->
