@@ -574,22 +574,26 @@
 								<div class="pt-50 pb-45 px-65 bg-white box-shadow-bottom rounded-10 z-1 module-form module-content-col">
 									<div class="lqd-contact-form lqd-contact-form-inputs-underlined lqd-contact-form-inputs-border-thick lqd-contact-form-button-block lqd-contact-form-button-filled lqd-contact-form-button-circle lqd-contact-form-inputs-md">
 										<div role="form" id="lqd-cf-contact-form">
-											<form action="./assets/php/mailer.php" method="post" class="lqd-cf-form" novalidate="novalidate" data-status="init">
+											<div class="lqd-cf-form" >
 												<div class="row -mr-15 -ml-15">
 													<div class="col col-12 col-md-6 px-15">
 														<span class="lqd-form-control-wrap" data-name="your-name">
-															<input type="text" name="name" value="" size="40" class="lqd-cf-form-control border-black-20 text-14 text-black" aria-required="true" aria-invalid="false" placeholder="Full name">
+															<input type="text" name="name" id="name" value="" size="40" class="lqd-cf-form-control border-black-20 text-14 text-black" aria-required="true" aria-invalid="false" placeholder="Full name">
 														</span>
 													</div>
 													<div class="col col-12 col-md-6 px-15">
 														<span class="lqd-form-control-wrap" data-name="email">
-															<input type="email" name="email" value="" size="40" class="lqd-cf-form-control border-black-20 text-14 text-black" aria-required="true" aria-invalid="false" placeholder="Email Address">
+															<input type="email" name="email" id="email" value="" size="40" class="lqd-cf-form-control border-black-20 text-14 text-black" aria-required="true" aria-invalid="false" placeholder="Email Address">
 														</span>
 													</div>
 													
+													<input style="display: none;" type="text" value="Free SEO Audit" id="subject" >
+													<input style="display: none;" type="text" value="no phone" id="phone" >
+
+													
 													<div class="col col-12 px-15">
 														<span class="lqd-form-control-wrap" data-name="message">
-															<textarea name="message" cols="10" rows="4" class="lqd-cf-form-control border-black-20 text-14 text-black" aria-required="true" aria-invalid="false" placeholder="Your message"></textarea>
+															<textarea name="message" id="message" cols="10" rows="4" class="lqd-cf-form-control border-black-20 text-14 text-black" aria-required="true" aria-invalid="false" placeholder="Your message"></textarea>
 														</span>
 													</div>
 													<div class="col col-12 px-15">
@@ -604,7 +608,7 @@
 														</span>
 													</div>
 													<div class="col col-12 px-15">
-														<input type="submit" value="get a quote" class="lqd-cf-form-control has-spinner border-none bg-green-400 -mt-10 text-green-700 text-14 font-medium">
+														<input onclick="sendEmail()" type="submit" value="get a quote" class="lqd-cf-form-control has-spinner border-none bg-green-400 -mt-10 text-green-700 text-14 font-medium">
 													</div>
 												</div>
 											</form>
@@ -1478,7 +1482,7 @@
 									<h6 class="text-10 uppercase tracking-1 text-black-60 ld-fh-element mb-0/5em inline-block relative">Call us directly</h6>
 								</div>
 								<div class="ld-fancy-heading relative">
-									<p class="text-18 font-medium mb-1/75em text-black ld-fh-element inline-block relative">(518) 602-5311</p>
+									<p class="text-18 font-medium mb-1/75em text-black ld-fh-element inline-block relative">(518) 538 3140</p>
 								</div>
 								<div class="ld-fancy-heading relative">
 									<h6 class="text-10 uppercase tracking-1 text-black-60 ld-fh-element mb-0/5em inline-block relative">Mail us directly</h6>
@@ -1693,5 +1697,36 @@
 		}
 	
 		
+	  </script>
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	  <script type="text/javascript">
+		  (function(){
+		  emailjs.init("of-qJpcXvDgROkkbD");
+		  })();
+		  </script>
+	  <script>
+	  function sendEmail() {
+		  var name = document.getElementById("name").value;
+		  var email = document.getElementById("email").value;
+		  var phone = document.getElementById("phone").value;
+		  var message = document.getElementById("message").value;
+		  var subject = document.getElementById("subject").value;
+	  
+		  // Sending email using EmailJS
+		  emailjs.send("service_1efdh2i", "template_20dotmj", {
+			  name: name,
+			  email: email,
+			  phone: phone,
+			  message: message,
+			  subject: subject,
+		  })
+		  .then(function(response) {
+			  // Email sent successfully
+			  alert("Message sent, thank you " + name);
+		  }, function(error) {
+			  // Email sending failed
+			  console.error("Email sending error:", error);
+		  });
+	  }
 	  </script>
 </html>
